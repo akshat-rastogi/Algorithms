@@ -35,11 +35,17 @@ public class SortingTest {
 	public static void main(String[] args) {
 		// Get User Input
 		SortingTest.getArray();
-		
+
 		// 1. Bubble Sort		
 		BubbleSort bs = new BubbleSort();
-		bs.bubbleSort(arr);
+		//bs.sort(arr);
 		System.out.println("\n\n Bubble Sort Output (Sorted Array):");
+		SortingTest.printArray();
+
+		// 2. Selection Sort		
+		SelectionSort ss = new SelectionSort();
+		ss.sort(arr);
+		System.out.println("\n\n Selection Sort Output (Sorted Array):");
 		SortingTest.printArray();
 		
 	}
