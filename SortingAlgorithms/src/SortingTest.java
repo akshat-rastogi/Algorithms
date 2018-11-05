@@ -50,9 +50,17 @@ public class SortingTest {
 
 		// 3. Insertion Sort		
 		InsertionSort is = new InsertionSort();
-		is.sort(arr,n);
+		//is.sort(arr,n);
 		System.out.println("\n\n Insertion Sort Output (Sorted Array):");
 		SortingTest.printArray();
+		
+		// 4. Merge Sort		
+		MergeSort ms = new MergeSort();
+		ms.sort(arr,0,n-1);
+		System.out.println("\n\n Merge Sort Output (Sorted Array):");
+		SortingTest.printArray();
+		
+		
 		
 	}
 
