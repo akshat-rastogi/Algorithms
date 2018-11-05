@@ -1,6 +1,5 @@
 public class BubbleSort {
-	void sort(int arr[]){
-		int n = arr.length;
+	void sort(int arr[], int n){
 		for (int i=0; i<n;i++){
 			for(int j=0; j<n-i-1;j++){
 				// If element is greater than the element 

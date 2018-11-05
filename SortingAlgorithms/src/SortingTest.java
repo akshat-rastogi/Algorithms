@@ -38,14 +38,20 @@ public class SortingTest {
 
 		// 1. Bubble Sort		
 		BubbleSort bs = new BubbleSort();
-		//bs.sort(arr);
+		//bs.sort(arr,n);
 		System.out.println("\n\n Bubble Sort Output (Sorted Array):");
 		SortingTest.printArray();
 
 		// 2. Selection Sort		
 		SelectionSort ss = new SelectionSort();
-		ss.sort(arr);
+		//ss.sort(arr,n);
 		System.out.println("\n\n Selection Sort Output (Sorted Array):");
+		SortingTest.printArray();
+
+		// 3. Insertion Sort		
+		InsertionSort is = new InsertionSort();
+		is.sort(arr,n);
+		System.out.println("\n\n Insertion Sort Output (Sorted Array):");
 		SortingTest.printArray();
 		
 	}
