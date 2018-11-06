@@ -56,11 +56,17 @@ public class SortingTest {
 		
 		// 4. Merge Sort		
 		MergeSort ms = new MergeSort();
-		ms.sort(arr,0,n-1);
+		//ms.sort(arr,0,n-1);
 		System.out.println("\n\n Merge Sort Output (Sorted Array):");
 		SortingTest.printArray();
 		
-		
+		// 4. Quick Sort		
+		QuickSort qs = new QuickSort();
+		qs.sort(arr,0,n-1);
+		System.out.println("\n\n Quick Sort Output (Sorted Array):");
+		SortingTest.printArray();
+				
+				
 		
 	}
 
