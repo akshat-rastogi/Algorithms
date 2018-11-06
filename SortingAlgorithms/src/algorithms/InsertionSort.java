@@ -1,6 +1,7 @@
+package algorithms;
 
 public class InsertionSort {
-	void sort(int arr[], int n){
+	public void isort(int arr[], int n){
 		int key, j, i;
 		for(i=1; i<n;i++){
 			

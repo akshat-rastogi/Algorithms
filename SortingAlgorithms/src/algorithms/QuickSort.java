@@ -1,3 +1,4 @@
+package algorithms;
 
 
 public class QuickSort {
@@ -21,11 +22,11 @@ public class QuickSort {
 		
 		return i+1;
 	}	
-	void sort(int arr[], int low, int high){
+	public void qsort(int arr[], int low, int high){
 		if(low<high){
 			int pi = partition(arr, low, high);
-			sort(arr, low, pi-1);
-			sort(arr, pi+1, high);
+			qsort(arr, low, pi-1);
+			qsort(arr, pi+1, high);
 			
 		}
 	}

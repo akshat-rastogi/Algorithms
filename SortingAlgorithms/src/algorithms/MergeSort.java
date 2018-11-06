@@ -1,3 +1,4 @@
+package algorithms;
 
 
 public class MergeSort {
@@ -44,12 +45,12 @@ public class MergeSort {
 		}
 		
 	}
-	void sort(int[] arr, int left, int right) {
+	public void msort(int[] arr, int left, int right) {
 		if(left<right){
 			int mid = (left+right) /2;
 			
-			sort(arr, left, mid);
-			sort(arr, mid+1, right);
+			msort(arr, left, mid);
+			msort(arr, mid+1, right);
 			
 			merge(arr, left, mid, right);
 		}

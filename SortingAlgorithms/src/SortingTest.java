@@ -1,4 +1,12 @@
+
+
 import java.util.Scanner;
+
+import algorithms.BubbleSort;
+import algorithms.InsertionSort;
+import algorithms.MergeSort;
+import algorithms.QuickSort;
+import algorithms.SelectionSort;
 
 public class SortingTest {
 
@@ -38,31 +46,34 @@ public class SortingTest {
 
 		// 1. Bubble Sort		
 		BubbleSort bs = new BubbleSort();
-		//bs.sort(arr,n);
+		bs.bsort(arr,n);
 		System.out.println("\n\n Bubble Sort Output (Sorted Array):");
 		SortingTest.printArray();
 
+		
+		
+		
 		// 2. Selection Sort		
 		SelectionSort ss = new SelectionSort();
-		//ss.sort(arr,n);
+		ss.ssort(arr,n);
 		System.out.println("\n\n Selection Sort Output (Sorted Array):");
 		SortingTest.printArray();
 
 		// 3. Insertion Sort		
 		InsertionSort is = new InsertionSort();
-		//is.sort(arr,n);
+		is.isort(arr,n);
 		System.out.println("\n\n Insertion Sort Output (Sorted Array):");
 		SortingTest.printArray();
 		
 		// 4. Merge Sort		
 		MergeSort ms = new MergeSort();
-		//ms.sort(arr,0,n-1);
+		ms.msort(arr,0,n-1);
 		System.out.println("\n\n Merge Sort Output (Sorted Array):");
 		SortingTest.printArray();
 		
 		// 4. Quick Sort		
 		QuickSort qs = new QuickSort();
-		qs.sort(arr,0,n-1);
+		qs.qsort(arr,0,n-1);
 		System.out.println("\n\n Quick Sort Output (Sorted Array):");
 		SortingTest.printArray();
 				
