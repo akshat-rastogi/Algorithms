@@ -1,20 +1,15 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
 
+import java.util.Scanner;
+import algorithms.BinarySearch;
 import algorithms.LinearSearch;
 
 public class SearchingTest {
-	
-	static int arr[];
-	static int n;
 	static Scanner scan = new Scanner(System.in);
 	/***************** 
 	 * Method to get array 
 	 *****************/
-	private static void getArray(){
-		
+	private static int[] getArray(){
+		int arr[],n;
 		System.out.println("Enter length of array:");
 		n = scan.nextInt();
 		arr = new int[n];
@@ -23,21 +18,47 @@ public class SearchingTest {
 		for (int i=0; i<n;i++){
 			arr[i] = scan.nextInt();
 		}
+		return arr;
 	}
 	
 	public static void main(String[] args) {
 		try{
-			int index = -1;
-			SearchingTest.getArray();
+			int x = -1, arr[], n;
 			
-			    	
-			System.out.println("\nEnter element to search:");
-			index = scan.nextInt();
-			
-			System.out.println(index);
-			
-			LinearSearch ls = new LinearSearch();
-			System.out.println("\n\n Element Found at index:"+ ls.linearSearch(arr,n,index)); 
+			System.out.println("Please choose an option:");
+			System.out.println("1. Linear Search");
+			System.out.println("2. Binary Search");
+			int option = scan.nextInt();
+			switch(option){
+				case 1:
+					// 1. Linear Search
+					arr = SearchingTest.getArray();
+					n = arr.length;
+					    	
+					System.out.println("\nEnter element to search:");
+					x = scan.nextInt();
+					
+					LinearSearch ls = new LinearSearch();
+					System.out.println("\n\n Element Found at index:"+ ls.search(arr,n,x)); 
+					break;
+					
+				case 2:
+					//2. Binary Search
+					System.out.println("\nPlease enter sorted array for Binary search:");
+					arr = SearchingTest.getArray();
+					n = arr.length;
+					
+					System.out.println("\nEnter element to search:");
+					x = scan.nextInt();
+					
+					BinarySearch bs = new BinarySearch();
+					System.out.println("\n\n Element Found at index:"+ bs.search(arr,0,n-1,x)); 
+					break;
+					
+				default:
+					System.out.println("Invalid Option");
+					break;
+			}	
 		}
 		finally{
 			if(scan!=null)
