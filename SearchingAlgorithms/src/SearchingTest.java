@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 import algorithms.BinarySearch;
+import algorithms.JumpSearch;
 import algorithms.LinearSearch;
 
 public class SearchingTest {
@@ -28,6 +29,8 @@ public class SearchingTest {
 			System.out.println("Please choose an option:");
 			System.out.println("1. Linear Search");
 			System.out.println("2. Binary Search");
+			System.out.println("3. Jump Search");
+			System.out.println("Enter your choice:");
 			int option = scan.nextInt();
 			switch(option){
 				case 1:
@@ -54,6 +57,18 @@ public class SearchingTest {
 					BinarySearch bs = new BinarySearch();
 					System.out.println("\n\n Element Found at index:"+ bs.search(arr,0,n-1,x)); 
 					break;
+				case 3:
+						//3. Jump Search
+						System.out.println("\nPlease enter sorted array for Jump search:");
+						arr = SearchingTest.getArray();
+						n = arr.length;
+						
+						System.out.println("\nEnter element to search:");
+						x = scan.nextInt();
+						
+						JumpSearch js = new JumpSearch();
+						System.out.println("\n\n Element Found at index:"+ js.search(arr,n,x)); 
+						break;
 					
 				default:
 					System.out.println("Invalid Option");
