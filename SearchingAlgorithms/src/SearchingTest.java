@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 import algorithms.BinarySearch;
+import algorithms.InterpolationSearch;
 import algorithms.JumpSearch;
 import algorithms.LinearSearch;
 
@@ -58,18 +59,31 @@ public class SearchingTest {
 					System.out.println("\n\n Element Found at index:"+ bs.search(arr,0,n-1,x)); 
 					break;
 				case 3:
-						//3. Jump Search
-						System.out.println("\nPlease enter sorted array for Jump search:");
-						arr = SearchingTest.getArray();
-						n = arr.length;
-						
-						System.out.println("\nEnter element to search:");
-						x = scan.nextInt();
-						
-						JumpSearch js = new JumpSearch();
-						System.out.println("\n\n Element Found at index:"+ js.search(arr,n,x)); 
-						break;
+					//3. Jump Search
+					System.out.println("\nPlease enter sorted array for Jump search:");
+					arr = SearchingTest.getArray();
+					n = arr.length;
 					
+					System.out.println("\nEnter element to search:");
+					x = scan.nextInt();
+					
+					JumpSearch js = new JumpSearch();
+					System.out.println("\n\n Element Found at index:"+ js.search(arr,n,x)); 
+					break;
+				
+				case 4:
+					//4. Interpolation Search
+					System.out.println("\nPlease enter sorted array for Interpolation search:");
+					arr = SearchingTest.getArray();
+					n = arr.length;
+					
+					System.out.println("\nEnter element to search:");
+					x = scan.nextInt();
+					
+					InterpolationSearch is = new InterpolationSearch();
+					System.out.println("\n\n Element Found at index:"+ is.search(arr,0,n-1,x)); 
+					break;
+				
 				default:
 					System.out.println("Invalid Option");
 					break;
